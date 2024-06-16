@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Scrollbar  */
+
+*::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: #000000;
+}
+
+*::-webkit-scrollbar-track:hover{
+    background-color: #000000;
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #a900fd;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-color: #5d1c7d;
+}
+
+/* Custom animations */
+
+/* Typing animation */
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+    
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+    
+.typing {
+    overflow: hidden;
+    border-right: .15em solid white;
+    white-space: nowrap;
+    animation: typing 1s steps(25, end), blink .75s step-end infinite;
+}
+
+/* Border color animation */
+
+@keyframes border-color {
+    50% {
+        border-color: #14b8a5;
+    }
+}
+
+.border-anima {
+    border: 1px solid #a900fd;
+    animation: border-color 2s infinite;
+}
+
+/* Color animation */
+
+.bg-anima {
+    color: #ffffff;
+
+    &:hover {
+        animation: bg-color 2s infinite;
+    }
+}
+
+/* Color and Border animation  */
+
+@keyframes bg-color {
+    0%, 100% {
+        color: #14b8a5;
+    }
+    50% {
+        color: #a900fd;
+    }
+}
+
+@keyframes border-color-v2 {
+    0%, 100% {
+        border-color: #14b8a5;
+    }
+    50% {
+        border-color: #a900fd;
+    }
+}
+
+.hover-border {
+
+    color: #ffffff;
+    border: 1px solid #ffffff;
+
+    &:hover {
+        animation: border-color-v2 2s infinite, bg-color 2s infinite;
+    }
+}
