@@ -32,13 +32,14 @@ function App() {
           <Header />
         </section>
 
+        <section ref={projectsRef}>
+          <Projects />
+        </section>
+        
         <section ref={aboutRef}>
           <About />
         </section>
 
-        <section ref={projectsRef}>
-          <Projects />
-        </section>
       </div>
       <Footer />
     </div>
